@@ -1,4 +1,4 @@
-package lessons;
+package lessons.countingelements;
 
 /**
  * COUNTING PROBLEM

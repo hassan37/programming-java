@@ -1,4 +1,4 @@
-package lessons;
+package lessons.iterations;
 
 /**
  * 1. Bitwise Shift Operator to drop bits

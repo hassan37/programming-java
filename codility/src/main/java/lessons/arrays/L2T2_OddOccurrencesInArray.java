@@ -1,4 +1,4 @@
-package lessons;
+package lessons.arrays;
 
 import org.junit.Assert;
 import org.junit.Test;
