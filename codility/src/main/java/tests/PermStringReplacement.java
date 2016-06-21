@@ -1,4 +1,4 @@
-package lessons;
+package tests;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -7,7 +7,7 @@ import java.util.Map.Entry;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class TEST_PermStringReplacement {
+public class PermStringReplacement {
 
 	/**
 	 * 
