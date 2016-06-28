@@ -30,6 +30,7 @@
 		<module>hacker-rank</module>
 		<module>random-programming-challenges</module>
 		<module>words-count</module>
+		<module>book-elements-of-programming-interview</module>
 	</modules>
 	
 	<dependencies>
