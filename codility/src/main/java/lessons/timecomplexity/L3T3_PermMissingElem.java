@@ -1,5 +1,7 @@
 package lessons.timecomplexity;
 
+import java.util.LinkedList;
+
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -21,6 +23,7 @@ public class L3T3_PermMissingElem {
 		for (int i = 0; i < n; i++) {
 			seriesSum -= A[i];
 		}
+		LinkedList<E>
 		
 		return (int) seriesSum;
 	}

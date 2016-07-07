@@ -1,4 +1,4 @@
-package ch3;
+package ch3FundamentalDataStructures;
 
 import java.util.Arrays;
 
