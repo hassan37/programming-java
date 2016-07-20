@@ -2,7 +2,7 @@ package ch3FundamentalDataStructures;
 
 import java.util.NoSuchElementException;
 
-public class SinglyLinkedList<E> {
+public class SinglyLinkedList<E> implements LinkedList<E> {
 
 	private static class Node<E> {
 		E e;
