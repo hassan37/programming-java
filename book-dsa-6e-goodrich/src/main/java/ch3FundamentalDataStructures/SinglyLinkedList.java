@@ -224,8 +224,17 @@ public class SinglyLinkedList<E> implements LinkedList<E> {
 		return unlinkLast();
 	}
 
-	public E getFirst() { return head.e; }
-	public E getLast() { return tail.e; }
+	public E getFirst() {
+		if (null == head) 
+			throw new NoSuchElementException();
+
+		return head.e;
+	}
+	public E getLast() {
+		if (null == tail) 
+			throw new NoSuchElementException();
+		return tail.e;
+	}
 	public E getAt(int index) {
 		E e = null;
 		if (isValidIndex(index)) {
