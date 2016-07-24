@@ -37,7 +37,7 @@ public class DoublyLinkedPositionalList<E> implements PositionalList<E> {
 	private Node<E> validateAndReturnNode(Position<E> p) {
 		if (!(p instanceof Node)) throw new IllegalArgumentException("Invalid postion.");
 		Node<E> n = (Node<E>) p;
-		if (!(null == n.next)) throw new IllegalArgumentException("This Position is no longer part of the list.");
+		if (null == n.next) throw new IllegalArgumentException("This Position is no longer part of the list.");
 		
 		return n;
 	}
@@ -96,32 +96,37 @@ public class DoublyLinkedPositionalList<E> implements PositionalList<E> {
 		return addBetween(e, nodeAtGivenPos, nodeAtGivenPos.next);
 	}
 
-
-
-
-
 	@Override
 	public Position<E> before(Position<E> p) throws IllegalArgumentException {
-		// TODO Auto-generated method stub
-		return null;
+		Node<E> nodeAtGivenPos = validateAndReturnNode(p);
+		return nodeAtGivenPos.prev;
 	}
 
 	@Override
 	public Position<E> after(Position<E> p) throws IllegalArgumentException {
-		// TODO Auto-generated method stub
-		return null;
+		Node<E> nodeAtGivenPos = validateAndReturnNode(p);
+		return nodeAtGivenPos.next;
 	}
 
 	@Override
 	public E set(Position<E> p, E e) throws IllegalArgumentException {
-		// TODO Auto-generated method stub
-		return null;
+		Node<E> nodeAtGivenPos = validateAndReturnNode(p);
+		E oe = nodeAtGivenPos.e;
+		nodeAtGivenPos.e = e;
+
+		return oe;
 	}
 
 	@Override
 	public E remove(Position<E> p) throws IllegalArgumentException {
-		// TODO Auto-generated method stub
-		return null;
+		Node<E> nodeAtGivenPos = validateAndReturnNode(p);
+		nodeAtGivenPos.prev.next = nodeAtGivenPos.next;
+		nodeAtGivenPos.next.prev = nodeAtGivenPos.prev;
+		nodeAtGivenPos.next = nodeAtGivenPos.prev = null;
+		E e = nodeAtGivenPos.e;
+		nodeAtGivenPos.e = null;
+		
+		return e;
 	}
 
 	private void print() {
@@ -144,6 +149,7 @@ public class DoublyLinkedPositionalList<E> implements PositionalList<E> {
 		sl.add(1); sl.print();
 		sl.add(2); sl.print();
 		sl.addFirst(3); sl.print();
+		sl.remove(sl.first()); sl.print();
 /*		sl.addAfter(4, 1); sl.print();
 		sl.add(5); sl.print();
 		System.out.println("\n---consecutive swap---\n");
