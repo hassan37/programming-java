@@ -125,7 +125,9 @@ public class DoublyLinkedPositionalList<E> implements PositionalList<E> {
 		nodeAtGivenPos.next = nodeAtGivenPos.prev = null;
 		E e = nodeAtGivenPos.e;
 		nodeAtGivenPos.e = null;
+		size--;
 		
+
 		return e;
 	}
 
