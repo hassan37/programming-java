@@ -22,7 +22,7 @@
 	</build>
 
 	<packaging>pom</packaging>
-	
+
 	<modules>
 		<module>algorithms</module>
 		<module>codility</module>
@@ -31,16 +31,17 @@
 		<module>random-programming-challenges</module>
 		<module>words-count</module>
 		<module>book-elements-of-programming-interview</module>
+		<module>spring-in-action-4e</module>
 	</modules>
-	
+
 	<dependencies>
 
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
-        </dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+		</dependency>
 
-    </dependencies>
-	
+	</dependencies>
+
 </project>
