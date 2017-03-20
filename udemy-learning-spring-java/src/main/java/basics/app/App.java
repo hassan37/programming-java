@@ -1,10 +1,19 @@
 package basics.app;
 
+import basics.beans.Person;
+
 public class App {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		App app = new App();
+		app.simplePersonDeomo();
 
+	}
+
+	private void simplePersonDeomo() {
+		Person p = new Person();
+		p.speak();
+		
 	}
 
 }
