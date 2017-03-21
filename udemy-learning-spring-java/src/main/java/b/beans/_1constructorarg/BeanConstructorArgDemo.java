@@ -1,4 +1,4 @@
-package b.beans.constructorarg;
+package b.beans._1constructorarg;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
