@@ -1,6 +1,6 @@
-package basics.app;
+package a.basics.app;
 
-import basics.beans.Person;
+import a.basics.beans.Person;
 
 public class App {
 

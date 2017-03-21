@@ -1,9 +1,9 @@
-package basics.app;
+package a.basics.app;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import basics.beans.Person;
+import a.basics.beans.Person;
 
 public class ClassPathXmlApplicationContextDemo {
 

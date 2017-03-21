@@ -1,4 +1,4 @@
-package basics.beans;
+package a.basics.beans;
 
 public class Person {
 
