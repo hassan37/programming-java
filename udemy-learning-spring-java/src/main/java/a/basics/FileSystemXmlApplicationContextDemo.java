@@ -1,11 +1,9 @@
-package a.basics.app;
+package a.basics;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 
-import a.basics.beans.Person;
-
-public class FileSystemXmlApplicationContextDemo {
+class FileSystemXmlApplicationContextDemo {
 
 	public static void main(String[] args) {
 		FileSystemXmlApplicationContextDemo app = new FileSystemXmlApplicationContextDemo();
