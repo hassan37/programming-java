@@ -11,7 +11,7 @@ class BeanConstructorArgDemo {
 	}
 
 	private void demo() {
-		ApplicationContext ctx = new ClassPathXmlApplicationContext("b/beans/constructorarg/beans.xml");
+		ApplicationContext ctx = new ClassPathXmlApplicationContext("b/beans/_1constructorarg/beans.xml");
 		Person p = (Person) ctx.getBean("person");
 		System.out.println(p);
 		p.speak();
