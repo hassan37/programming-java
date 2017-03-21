@@ -1,4 +1,4 @@
-package b.beans.configuration;
+package b.beans.constructorarg;
 
 class Person {
 

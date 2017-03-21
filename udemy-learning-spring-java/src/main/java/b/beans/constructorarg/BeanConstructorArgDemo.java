@@ -1,4 +1,4 @@
-package b.beans.configuration;
+package b.beans.constructorarg;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -11,7 +11,7 @@ class BeanConstructorArgDemo {
 	}
 
 	private void demo() {
-		ApplicationContext ctx = new ClassPathXmlApplicationContext("b/beans/configuration/beans.xml");
+		ApplicationContext ctx = new ClassPathXmlApplicationContext("b/beans/constructorarg/beans.xml");
 		Person p = (Person) ctx.getBean("person");
 		System.out.println(p);
 		p.speak();
