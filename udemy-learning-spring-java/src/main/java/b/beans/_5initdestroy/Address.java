@@ -10,6 +10,9 @@ class Address {
 		this.city = city;
 	}
 
+	public void onCreate() { System.out.println("Address Created."); }
+	public void onDelete() { System.out.println("Address Deleted."); }
+	
 	String getStreet() { return street; }
 	void setStreet(String street) { this.street = street; }
 

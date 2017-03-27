@@ -14,9 +14,10 @@ class Person {
 		this.name = name;
 	}
 
-	void speak() {
-		System.out.println("Hello Spring! I am a person.");
-	}
+	void speak() { System.out.println("Hello Spring! I am a person."); }
+
+	public void onCreate() { System.out.println("Person Created."); }
+	public void onDelete() { System.out.println("Person Died."); }
 
 	public int getTaxID() { return taxID; }
 	public void setTaxID(int taxID) { this.taxID = taxID; }

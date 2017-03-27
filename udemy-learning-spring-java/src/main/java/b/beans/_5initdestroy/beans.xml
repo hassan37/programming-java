@@ -4,15 +4,15 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-	<bean id="person" class="b.beans._4scope.Person"
-		scope="singleton">
+	<bean id="person" class="b.beans._5initdestroy.Person"
+		scope="singleton" init-method="onCreate" destroy-method="onDelete">
 		<constructor-arg name="id" value="555"></constructor-arg>
 		<constructor-arg name="name" value="John"></constructor-arg>
 		<property name="taxID" value="123456"></property>
 		<property name="address" ref="address"></property>
 	</bean>
-	<bean id="address" class="b.beans._4scope.Address"
-		scope="prototype">
+	<bean id="address" class="b.beans._5initdestroy.Address"
+		scope="prototype" destroy-method="onDelete" init-method="onCreate">
 		<constructor-arg name="street" value="Umar Hayat Block"></constructor-arg>
 		<constructor-arg name="city" value="Lahore"></constructor-arg>
 	</bean>
