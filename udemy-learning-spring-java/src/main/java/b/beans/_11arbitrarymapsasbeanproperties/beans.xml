@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="lion" class="b.beans._11arbitrarymapsasbeanproperties.Animal">
+		<property name="name" value="alice"></property>
+		<property name="type" value="lion"></property>
+	</bean>
+
+	<bean id="elephant" class="b.beans._11arbitrarymapsasbeanproperties.Animal">
+		<property name="name" value="murphy"></property>
+		<property name="type" value="elephant"></property>
+	</bean>
+
+	<bean id="monkey" class="b.beans._11arbitrarymapsasbeanproperties.Animal">
+		<property name="name" value="john"></property>
+		<property name="type" value="monkey"></property>
+	</bean>
+
+
+	<bean id="jungle" class="b.beans._11arbitrarymapsasbeanproperties.Jungle">
+		
+		<property name="animals">
+			<map>
+				<entry key="monkey" value-ref="monkey"></entry>
+				<entry key="elephant" value-ref="elephant"></entry>
+				<entry key="lion" value-ref="lion"></entry>
+			</map>
+		</property>
+
+		<property name="foods">
+			<map>
+				<entry key="monkey" value="banana"></entry>
+				<entry key="elephant" value="grass"></entry>
+				<entry key="lion" value="goat"></entry>
+			</map>
+		</property>
+	</bean>
+</beans>
