@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+	default-autowire="byType">
+
+	<bean id="logger" class="c.autowiring._5removingduplicates.Logger" />
+
+	<bean id="appConsoleLogWriter" class="c.autowiring._5removingduplicates.ConsoleLogWriter"
+		primary="true" />
+	<bean id="localConsoleLogWriter" class="c.autowiring._5removingduplicates.ConsoleLogWriter" />
+
+	<bean id="appFileLogWriter"
+		class="c.autowiring._5removingduplicates.FileLogWriter"
+		autowire-candidate="false" />
+	<bean id="localFileLogWriter" class="c.autowiring._5removingduplicates.FileLogWriter" />
+</beans>
