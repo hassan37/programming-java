@@ -33,6 +33,7 @@
 		<module>book-elements-of-programming-interview</module>
 		<module>spring-in-action-4e</module>
 		<module>udemy-learning-spring-java</module>
+		<module>data-structures</module>
 	</modules>
 
 	<dependencies>
