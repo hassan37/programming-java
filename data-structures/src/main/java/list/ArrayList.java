@@ -2,13 +2,13 @@ package list;
 
 public class ArrayList<E> implements List<E> {
 
-	private static final int DEFAULT_CAPACITY = 16;
+/*	private static final int DEFAULT_CAPACITY = 16;
 
 	private E[] elementsArray;
 
 	public ArrayList() { capacity = DEFAULT_CAPACITY; }
 	public ArrayList(int cap) { capacity = cap > 0 ? cap : DEFAULT_CAPACITY; }
-
+*/
 	@Override
 	public int size() {
 		return 0;
