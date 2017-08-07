@@ -16,4 +16,9 @@ CREATE TABLE udemy_spring.offer (
   PRIMARY KEY (id)
 )ENGINE=InnoDB;
 
+INSERT INTO udemy_spring.offer(name, email, text) values 
+	('cat', 'cat@sale.com', 'cute cat for sale'),
+	('dog', 'dog@sale.com', 'cute dog for sale')
+;
+
 select * from offer;
