@@ -1,6 +1,6 @@
-package list;
+package list.src;
 
-interface List<E> {
+public interface HList<E> {
 
 	int size();
     boolean isEmpty();

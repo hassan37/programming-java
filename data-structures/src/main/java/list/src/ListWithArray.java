@@ -1,32 +1,30 @@
-package list;
+package list.src;
 
-public class ArrayList<E> implements List<E> {
+public class ListWithArray<E> implements HList<E> {
 
-/*	private static final int DEFAULT_CAPACITY = 16;
+	private static final int DEFAULT_CAPACITY = 16;
+	private int cap;
+	private int size;
 
-	private E[] elementsArray;
+	private E[] items;
 
-	public ArrayList() { capacity = DEFAULT_CAPACITY; }
-	public ArrayList(int cap) { capacity = cap > 0 ? cap : DEFAULT_CAPACITY; }
-*/
-	@Override
-	public int size() {
-		return 0;
+	public ListWithArray() { cap = DEFAULT_CAPACITY; }
+	public ListWithArray(int cap) { cap = cap > 0 ? cap : DEFAULT_CAPACITY; }
+
+	private void grow() {
+		
 	}
 
-	@Override
-	public boolean isEmpty() {
-		return false;
-	}
-
-	@Override
 	public void add(E e) {
+		items[size++] = e;
 	}
+
+	public int size() { return 0; }
+
+	public boolean isEmpty() { return size == 0; }
 
 	@Override
 	public void addAt(E e, int i) {
-		// TODO Auto-generated method stub
-
 	}
 
 	@Override
@@ -65,4 +63,10 @@ public class ArrayList<E> implements List<E> {
 
 	}
 
+	public static void main(String[] args) {
+		int size = 32;
+		for (int j = 0; j < size; j++) {
+			System.out.println(j + " | " + (j >> 1));
+		}
+	}
 }
