@@ -1,5 +1,7 @@
 package datastructures;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -16,6 +18,10 @@ public class Java2dArray {
 		int[][] j2dArr = j2a.get2DArrayFromUser();
 		int maxSum = j2a.findMaxSumHourGlass(j2dArr);
 		System.out.println(maxSum);
+		
+		List<String> l = new ArrayList<>();
+		"String".equals("String");
+		
 	}
 
 	private int findMaxSumHourGlass(int[][] j2dArr) {

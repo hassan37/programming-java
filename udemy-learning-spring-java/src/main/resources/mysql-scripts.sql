@@ -4,8 +4,8 @@ CREATE DATABASE udemy_spring
 
 USE udemy_spring;
 
-CREATE USER 'us_db_usr'@localhost IDENTIFIED BY 'UAtFVKdWeVHbcp8R';
-GRANT SELECT, INSERT, UPDATE ON udemy_spring.* TO 'us_db_usr'@localhost;
+CREATE USER 'us_db_usr'@'%' IDENTIFIED BY 'UAtFVKdWeVHbcp8R';
+GRANT SELECT, INSERT, UPDATE ON udemy_spring.* TO 'us_db_usr'@'%';
 
 CREATE TABLE udemy_spring.offer (
   id         SERIAL,

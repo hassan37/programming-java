@@ -8,8 +8,7 @@
 	<context:annotation-config />
 	<context:component-scan base-package="e.db._1dao" />
 
-	<bean id="dataSouruce" class="org.apache.commons.dbcp.BasicDataSource"
-		destroy-method="close">
+	<bean id="dataSouruce" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
 
 		<property name="driverClassName" value="${jdbc.driver}"></property>
 		<property name="url" value="${jdbc.url}"></property>
