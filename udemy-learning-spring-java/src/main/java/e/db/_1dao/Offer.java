@@ -11,33 +11,37 @@ public class Offer {
 		return this.id;
 	}
 
-	public void setId(Integer id) {
+	public Offer setId(Integer id) {
 		this.id = id;
+		return this;
 	}
 
 	public String getEmail() {
 		return this.email;
 	}
 
-	public void setEmail(String email) {
+	public Offer setEmail(String email) {
 		this.email = email;
+		return this;
 	}
 
 	public String getName() {
 		return this.name;
 	}
 
-	public void setName(String name) {
+	public Offer setName(String name) {
 		this.name = name;
+		return this;
 	}
 
 	public String getText() {
 		return this.text;
 	}
 
-	public void setText(String text) {
+	public Offer setText(String text) {
 		this.text = text;
-	}
+		return this;
+}
 
 	@Override
 	public String toString() {
