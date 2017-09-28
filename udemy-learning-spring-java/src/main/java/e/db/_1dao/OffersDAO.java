@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+import org.springframework.jdbc.core.namedparam.SqlParameterSource;
+import org.springframework.jdbc.core.namedparam.SqlParameterSourceUtils;
 import org.springframework.stereotype.Component;
 
 @Component("offersDAO")
@@ -46,6 +48,11 @@ public class OffersDAO {
 		BeanPropertySqlParameterSource params = new BeanPropertySqlParameterSource(offer);
 
 		return jdbc.update("insert into offer (name, text, email) values (:name, :text, :email)", params) == 1;
+	}
+
+	public int[] create(List<Offer> offers) {
+		SqlParameterSource[] params = SqlParameterSourceUtils.createBatch(offers.toArray());
+		return jdbc.batchUpdate("insert into offer (name, text, email) values (:name, :text, :email)", params);
 	}
 
 }

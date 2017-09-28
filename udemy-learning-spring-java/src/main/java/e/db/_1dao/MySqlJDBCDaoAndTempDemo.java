@@ -1,5 +1,8 @@
 package e.db._1dao;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.dao.DataAccessException;
@@ -16,6 +19,7 @@ public class MySqlJDBCDaoAndTempDemo {
 		ApplicationContext ctx = new ClassPathXmlApplicationContext("e/db/_1dao/beans.xml");
 		OffersDAO od = (OffersDAO) ctx.getBean("offersDAO");
 		try {
+			tryJDBCBatchCreate(od);
 			tryJDBCCreate(od);
 			tryJDBCUpdate(od);
 			tryJDBCDelete(od);
@@ -29,11 +33,27 @@ public class MySqlJDBCDaoAndTempDemo {
 
 	}
 
+	private void tryJDBCBatchCreate(OffersDAO od) {
+		Offer o1 = new Offer().setEmail("batch-created@email.com").setName("batch-created.name.1").setText("batch-cute created for sale");
+		Offer o2 = new Offer().setEmail("batch-created@email.com").setName("batch-created.name.2").setText("batch-cute created for sale");
+		Offer o3 = new Offer().setEmail("batch-created@email.com").setName("batch-created.name.3").setText("batch-cute created for sale");
+		List<Offer> offers = new ArrayList<>(3);
+		offers.add(o1);
+		offers.add(o2);
+		offers.add(o3);
+
+		System.out.println(od.create(offers));
+	}
+
 	private void tryJDBCDelete(OffersDAO od) {
 		System.out.println(od.getOffer(3));
-		if (od.deleteOffer(3)) {
-			System.out.println("Offer: 3 deleted.");
-			return;
+		try {
+			if (od.deleteOffer(3)) {
+				System.out.println("Offer: 3 deleted.");
+				return;
+			}
+		} catch (Exception e) {
+			System.out.println("Unable to delete due to: " + e.getMessage());
 		}
 		System.out.println("Offer: 3 cannot be deleted.");
 	}
