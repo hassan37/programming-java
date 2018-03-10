@@ -24,16 +24,17 @@
 	<packaging>pom</packaging>
 
 	<modules>
-		<module>algorithms</module>
-		<module>codility</module>
-		<module>book-dsa-6e-goodrich</module>
-		<module>hacker-rank</module>
-		<module>random-programming-challenges</module>
+		
+		
+		
+		
+		
 		<module>words-count</module>
-		<module>book-elements-of-programming-interview</module>
-		<module>spring-in-action-4e</module>
+		
+		
 		<module>udemy-learning-spring-java</module>
-		<module>data-structures</module>
+		
+		<module>practice-and-interview-preparation</module>
 	</modules>
 
 	<dependencies>
