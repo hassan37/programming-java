@@ -20,9 +20,6 @@ public class _3_NewYearChaos_MinBribes {
 			return 0;
 
 		int totalElements = a.length;
-		if (0 == totalElements)
-			return 0;
-
 		int totalBribes = 0;
 		for (int right = (totalElements - 1); right >= 0; right--) {
 			int currentElement = a[right];
