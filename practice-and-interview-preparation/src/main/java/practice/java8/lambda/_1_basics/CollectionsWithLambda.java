@@ -1,4 +1,4 @@
-package practice.java8.lambda;
+package practice.java8.lambda._1_basics;
 
 import java.util.Arrays;
 import java.util.List;

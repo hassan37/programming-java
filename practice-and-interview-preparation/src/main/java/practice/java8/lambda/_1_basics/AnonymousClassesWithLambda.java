@@ -1,11 +1,10 @@
-package practice.java8.lambda;
+package practice.java8.lambda._1_basics;
 
 import java.io.File;
 import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
-import java.util.function.IntSupplier;
 
 public class AnonymousClassesWithLambda {
 
@@ -25,7 +24,7 @@ public class AnonymousClassesWithLambda {
 	}
 
 	static void stringComparatorExampleUsingLambda() {
-		Comparator<String> lengthComp = (String s1, String s2) -> Integer.compare(s2.length(), s1.length());
+		Comparator<String> lengthComp = (s1, s2) -> Integer.compare(s2.length(), s1.length());
 		List<String> list = Arrays.asList("*", "***", "**");
 		list.sort(lengthComp);
 
