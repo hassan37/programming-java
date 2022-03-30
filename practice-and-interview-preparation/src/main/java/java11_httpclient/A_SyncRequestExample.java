@@ -28,7 +28,7 @@ public class A_SyncRequestExample {
 		System.out.println("resp > " + resp);
 	}
 
-	private static void httpAsyncTest() throws IOException, InterruptedException {
+	static void httpAsyncTest() throws IOException, InterruptedException {
 		URLs.stream().map(u -> {
 			HttpRequest req = HttpRequest.newBuilder(URI.create(u)).GET().build();
 
